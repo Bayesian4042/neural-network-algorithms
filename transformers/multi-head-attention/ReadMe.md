@@ -1,0 +1,1 @@
+This is an implementation of multi-head attention from the paper [Attention all you need](https://arxiv.org/pdf/1706.03762.pdf) in PyTorch.
