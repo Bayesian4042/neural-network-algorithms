@@ -22,3 +22,6 @@
 # QLoRA
 1. Quanitzed LoRA
 2. bitandbytes library
+
+# Code
+Finetuning of LLama2 on SQL dataset in main.py
