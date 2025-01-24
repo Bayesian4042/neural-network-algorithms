@@ -20,12 +20,13 @@ class Classifier(nn.Module):
         self.model = nn.Sequential(
             nn.Linear(784, 200),
             nn.ReLU(),
+            nn.LayerNorm(200),
             nn.Linear(200, 10),
-            nn.Sigmoid()
+            nn.ReLU()
         )
 
         self.loss = nn.MSELoss()
-        self.optimizer = torch.optim.SGD(self.parameters(), lr=0.01)
+        self.optimizer = torch.optim.Adam(self.parameters(), lr=0.001)
     
     def forward(self, inputs):
         return self.model(inputs)
